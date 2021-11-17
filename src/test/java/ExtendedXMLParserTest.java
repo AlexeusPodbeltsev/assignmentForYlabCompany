@@ -22,9 +22,9 @@ public class ExtendedXMLParserTest {
     @Test
     public void noSearchInputTest() {
         executeJarFile(NO_SEARCH_INPUT);
-        String expectedResult = "/file-776194140.xml\n" +
-                "/dir-880176375/file-1073842118.java\n" +
-                "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/file-776194140.xml" + System.lineSeparator() +
+                "/dir-880176375/file-1073842118.java" + System.lineSeparator() +
+                "/dir-880176375/dir-2145307015/file-1498940214.xhtml"+ System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -32,7 +32,7 @@ public class ExtendedXMLParserTest {
     @Test
     public void exactSearchInputTest() {
         executeJarFile(EQUALS_SEARCH_INPUT);
-        String expectedResult = "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/dir-880176375/dir-2145307015/file-1498940214.xhtml" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -40,7 +40,7 @@ public class ExtendedXMLParserTest {
     @Test
     public void simpleSearchInputTest() {
         executeJarFile(SIMPLE_SEARCH_INPUT);
-        String expectedResult = "/dir-880176375/file-1073842118.java\n";
+        String expectedResult = "/dir-880176375/file-1073842118.java" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -48,9 +48,9 @@ public class ExtendedXMLParserTest {
     @Test
     public void extendedSearchInputTest() {
         executeJarFile(EXTENDED_SEARCH_INPUT);
-        String expectedResult = "/file-776194140.xml\n" +
-                "/dir-880176375/file-1073842118.java\n" +
-                "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/file-776194140.xml" + System.lineSeparator() +
+                "/dir-880176375/file-1073842118.java" + System.lineSeparator() +
+                "/dir-880176375/dir-2145307015/file-1498940214.xhtml" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 

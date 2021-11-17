@@ -21,9 +21,9 @@ public class SimpleXMLSaxParserTest {
     @Test
     public void noSearchInputTest() {
         Main.main(NO_SEARCH_INPUT);
-        String expectedResult = "/file-776194140.xml\n" +
-                "/dir-880176375/file-1073842118.java\n" +
-                "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/file-776194140.xml" + System.lineSeparator() +
+                "/dir-880176375/file-1073842118.java" + System.lineSeparator() +
+                "/dir-880176375/dir-2145307015/file-1498940214.xhtml" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -31,7 +31,7 @@ public class SimpleXMLSaxParserTest {
     @Test
     public void exactSearchInputTest() {
         Main.main(EQUALS_SEARCH_INPUT);
-        String expectedResult = "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/dir-880176375/dir-2145307015/file-1498940214.xhtml" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -39,7 +39,7 @@ public class SimpleXMLSaxParserTest {
     @Test
     public void simpleSearchInputTest() {
         Main.main(SIMPLE_SEARCH_INPUT);
-        String expectedResult = "/dir-880176375/file-1073842118.java\n";
+        String expectedResult = "/dir-880176375/file-1073842118.java" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 
@@ -47,9 +47,9 @@ public class SimpleXMLSaxParserTest {
     @Test
     public void extendedSearchInputTest() {
         Main.main(EXTENDED_SEARCH_INPUT);
-        String expectedResult = "/file-776194140.xml\n" +
-                "/dir-880176375/file-1073842118.java\n" +
-                "/dir-880176375/dir-2145307015/file-1498940214.xhtml\n";
+        String expectedResult = "/file-776194140.xml" + System.lineSeparator() +
+                "/dir-880176375/file-1073842118.java" + System.lineSeparator() +
+                "/dir-880176375/dir-2145307015/file-1498940214.xhtml" + System.lineSeparator();
         assertEquals(expectedResult, outContent.toString());
     }
 }
