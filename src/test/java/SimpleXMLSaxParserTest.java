@@ -8,7 +8,7 @@ import java.io.PrintStream;
 import static constant.ConstantsTest.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+@DisplayName("Simple XML SaxParser Test")
 public class SimpleXMLSaxParserTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
