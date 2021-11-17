@@ -27,7 +27,7 @@ public class ArgumentTest {
     public void storeParamTest() {
         ArgumentProcess argumentProcess = new ArgumentProcess(SIMPLE_SEARCH_INPUT);
 
-        File f = new File(System.getProperty("user.dir") + File.separator + PATH_TO_XML_FILE);
+        File f = new File(System.getProperty("user.dir") + File.separator + PATH_TO_TEST_FILES_XML_FILE);
         String expectedInputFileName = f.getAbsolutePath();
         String expectedMask = "*.java";
         SearchType expectedSearchType = SearchType.Mask;
