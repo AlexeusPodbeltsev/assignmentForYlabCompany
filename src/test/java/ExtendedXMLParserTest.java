@@ -57,12 +57,14 @@ public class ExtendedXMLParserTest {
     private void executeJarFile(String[] userInput) {
 
         try {
-            Process ps = Runtime.getRuntime().exec("java -jar assignment.jar " + String.join(" ", userInput));
+            Process ps = Runtime.getRuntime().exec("java -jar assignment-1.0.jar " + String.join(" ", userInput));
+
             ps.waitFor();
             java.io.InputStream is = ps.getInputStream();
             byte[] b = new byte[is.available()];
             is.read(b, 0, b.length);
-            System.out.print(new String(b));
+            String s =  new String(b);
+            System.out.print(s);
 
         } catch (IOException | InterruptedException e) {
             System.out.println(e.getMessage());

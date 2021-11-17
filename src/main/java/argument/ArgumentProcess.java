@@ -56,8 +56,7 @@ public class ArgumentProcess extends ArgumentList {
     }
 
     private String fileExists(String fileName) {
-        String path = System.getProperty("user.dir");
-        File f = new File(path + File.separator + fileName);
+        File f = new File(fileName);
         if (f.exists() && f.isFile()) {
             return f.getAbsolutePath();
         } else {
